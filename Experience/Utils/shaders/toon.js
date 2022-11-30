@@ -1,5 +1,5 @@
 export default function toonFragmentShader() {
-  return `#include <common>
+	return `#include <common>
 #include <lights_pars_begin>
 
 uniform vec3 uColor;
