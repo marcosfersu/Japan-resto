@@ -8,6 +8,8 @@ import Time from "./Utils/Time";
 import Camera from "./Camera.js";
 import Renderer from "./Renderer";
 
+import ScrollPosition from "./Utils/ScrollPosition";
+
 import World from "./World/World";
 
 export default class Experience {
@@ -25,6 +27,9 @@ export default class Experience {
 		this.renderer = new Renderer();
 		this.resources = new Resources(assets);
 		this.world = new World();
+
+		const textParent = document.querySelector(".section-text");
+		ScrollPosition(textParent);
 
 		this.sizes.on("resize", () => {
 			this.resize();
