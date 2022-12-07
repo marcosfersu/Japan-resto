@@ -28,8 +28,10 @@ export default class Experience {
 		this.resources = new Resources(assets);
 		this.world = new World();
 
-		const textParent = document.querySelector(".section-text");
-		ScrollPosition(textParent);
+		const textParent = document.querySelectorAll(".section-text");
+		textParent.forEach(text => {
+			ScrollPosition(text);
+		});
 
 		this.sizes.on("resize", () => {
 			this.resize();
